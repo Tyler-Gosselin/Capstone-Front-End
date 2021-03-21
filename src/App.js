@@ -7,6 +7,7 @@ import Home from './Components/Pages/Home'
 import Blog from './Components/Pages/Blogs'
 import About from './Components/Pages/About'
 
+
 function App() {
   return (
     <div className="container">
