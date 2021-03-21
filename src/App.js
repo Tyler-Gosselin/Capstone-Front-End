@@ -3,6 +3,9 @@ import ReactDom from 'react-dom'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import NavContainer from "./Components/Nav/NavContainer"
+import Home from './Components/Pages/Home'
+import Blog from './Components/Pages/Blogs'
+import About from './Components/Pages/About'
 
 function App() {
   return (
@@ -10,8 +13,12 @@ function App() {
       <Router>
       <div>
         <NavContainer />
+        <Switch>
+          <Route exact path ="/" component={Home}/>
+          <Route path="/blog" component={Blog} />
+          <Route path="/about" component={About} />
+        </Switch>
       </div>
-      <h1>Hello world</h1>
     </Router>
     </div>
   );
