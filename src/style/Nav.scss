@@ -1,3 +1,19 @@
 .navigation-wrapper {
-  background-color: black;
+  background-color: grey;
+
+  a {
+    margin: 15px;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: left;
+  }
+
+  .nav-links-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+  }
 }
