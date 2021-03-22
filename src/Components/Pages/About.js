@@ -1,37 +1,44 @@
-import React from 'react'
+import React from "react";
 
 function About() {
   return (
     <div className="content-page-wrapper">
-      <div
-        className="left-column"
-        style={{
-          background: "url(" +  + ") no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></div>
+      <div className="left-column">
+        <div className="left-column-image"> IMAGE GOES HERE</div>
+        <div className="left-column-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
+          consequatur maxime laudantium minima quasi blanditiis, nobis dicta cum
+          earum expedita animi totam in temporibus voluptatibus ex nemo
+          doloremque! Magni officiis enim neque impedit at cumque, magnam,
+          placeat fuga, similique vel pariatur cum in ad minus voluptatem
+          consequuntur rem consectetur porro commodi animi facilis sed unde!
+          Incidunt nesciunt impedit aut maxime provident molestias, id, fuga
+          alias asperiores unde, cumque blanditiis mollitia enim perspiciatis
+          eos! Quaerat nemo facilis placeat repellendus repellat, minus officia
+          voluptate suscipit? Vitae laboriosam atque exercitationem recusandae
+          nemo dolor labore placeat magni, quos doloremque harum molestiae
+          perferendis vel quo.
+        </div>
+      </div>
       <div className="right-column">
-        Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis
-        dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.
-        Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget
-        risus varius blandit sit amet non magna. Morbi leo risus, porta ac
-        consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
-        at eget metus. Donec sed odio dui. Cras mattis consectetur purus sit
-        amet fermentum. Etiam porta sem malesuada magna mollis euismod. Nulla
-        vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque
-        ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non
-        commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-        elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur
-        et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis
-        risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac
-        consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis
-        euismod semper.
+        <div className="right-column-image"> IMAGE GOES HERE</div>
+        <div className="right-column-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
+          consequatur maxime laudantium minima quasi blanditiis, nobis dicta cum
+          earum expedita animi totam in temporibus voluptatibus ex nemo
+          doloremque! Magni officiis enim neque impedit at cumque, magnam,
+          placeat fuga, similique vel pariatur cum in ad minus voluptatem
+          consequuntur rem consectetur porro commodi animi facilis sed unde!
+          Incidunt nesciunt impedit aut maxime provident molestias, id, fuga
+          alias asperiores unde, cumque blanditiis mollitia enim perspiciatis
+          eos! Quaerat nemo facilis placeat repellendus repellat, minus officia
+          voluptate suscipit? Vitae laboriosam atque exercitationem recusandae
+          nemo dolor labore placeat magni, quos doloremque harum molestiae
+          perferendis vel quo.
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
