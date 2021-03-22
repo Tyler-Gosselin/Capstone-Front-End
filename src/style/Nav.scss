@@ -1,19 +1,21 @@
 .navigation-wrapper {
   background-color: grey;
+  width: 100%;
 
   a {
-    margin: 15px;
+    padding: 20px;
   }
 
   .logo-wrapper {
     display: flex;
     justify-content: left;
+    align-content: center;
+    
   }
 
   .nav-links-wrapper {
     display: flex;
     justify-content: center;
     align-content: center;
-
   }
 }

@@ -6,7 +6,7 @@ function NavContainer() {
     <div className="navigation-wrapper">
       <div className="logo-wrapper">
         <NavLink exact to="/">
-          Home
+          The Half-Glass SportsCast
         </NavLink>
       </div>
       <div className="nav-links-wrapper">
@@ -16,6 +16,13 @@ function NavContainer() {
         <NavLink exact to="/about">
           About
         </NavLink>
+        <NavLink exact to = "/login">
+          Sign In
+        </NavLink>
+        <NavLink exact to = "/register">
+          Sign Up
+        </NavLink>
+
       </div>
     </div>
   );
