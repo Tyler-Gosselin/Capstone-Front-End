@@ -1,7 +1,22 @@
+
 .blog-content-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
-  border: 1px solid black;
-  width: 75vw;
-  height:calc(100vh - 87px);
+  align-items: center;
+  
+  .blogs-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: calc(100vh - 87px);
+    width: 75vw;
+  }
+
+  .create-blog-link {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
 }
