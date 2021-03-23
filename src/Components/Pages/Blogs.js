@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 function Blog() {
   return (
     <div className="blog-content-wrapper">
-      <h1> Blog </h1>
+      <div className="blogs-wrapper">
+        <h1> Blog </h1>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Blog
+export default Blog;
