@@ -1,7 +1,13 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function Blog() {
+  const [blogs, setBlogs] = useState();
+
+  useEffect(() => {
+    axios.get("http://127.0.0.1:5000/api/v1/get_blogs");
+  });
+
   return (
     <div className="blog-content-wrapper">
       <div className="blogs-wrapper">

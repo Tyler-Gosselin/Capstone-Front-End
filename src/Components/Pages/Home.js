@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios"
 
 function Home() {
+  const [news, setNews] = useState()
+
+  useEffect(() => {
+    axios
+      .get()
+  })
+
+
   return (
     <div className="home-container">
       <div className="content-wrapper">
