@@ -9,8 +9,6 @@ import About from "./Pages/About";
 import Login from "../Components/Auth/Login";
 import Register from "../Components/Auth/Register";
 
-
-
 function App() {
   return (
     <div className="container">

@@ -5,8 +5,7 @@ function Home() {
   const [news, setNews] = useState()
 
   useEffect(() => {
-    axios
-      .get()
+   
   })
 
 
