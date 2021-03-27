@@ -32,7 +32,7 @@ const AuthForm = () => {
 
   const handleFormToShow = () => {
     if (formToShow === "login") {
-      setFormToShow("register");
+      setFormToShow("register-user");
     } else {
       setFormToShow("login");
     }
@@ -48,6 +48,7 @@ const AuthForm = () => {
 
   return (
     <div className="login-form-wrapper">
+      <h1>{formToShow}</h1>
       <form onSubmit={handleSubmit} className="login-form">
         <div>
           <input
@@ -78,9 +79,9 @@ const AuthForm = () => {
         </div>
         <div>
           <button className="account-btn" type="submit">
-            Login
+            {formToShow}
           </button>
-          <div onClick={handleFormToShow}>{formQuestionText()}</div>
+          <button onClick={handleFormToShow}>{formQuestionText()}</button>
         </div>
       </form>
     </div>

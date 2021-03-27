@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-import AuthContext from "./contexts/AuthContext";
+import AuthContext from "../Contexts/Authcontext";
 
-const LogoutButton = () => {
-  const { handleSuccessfulLogout } = useContext(AuthContext);
+const LogOutButton = () => {
+  const { handleLogout } = useContext(AuthContext);
   return (
     <div>
-      <button onClick={handleSuccessfulLogout}>Logout</button>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 };
 
-export default LogoutButton;
+export default LogOutButton;

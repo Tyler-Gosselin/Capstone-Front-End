@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import LogOutButton from "../Auth/LogOutButton";
+import AuthContext from "../Contexts/Authcontext";
 
-function NavContainer() {
+const NavContainer = () => {
+  const {loggedInStatus } = useContext(AuthContext)
+
   return (
     <div className="navigation-wrapper">
       <div className="logo-wrapper">
@@ -17,10 +21,12 @@ function NavContainer() {
           About
         </NavLink>
         <button className= "nav-button">
+        {loggedInStatus === "LOGGED_IN"}
         <NavLink exact to = "/auth">
           Login/Create Account
         </NavLink>
         </button>
+        <LogOutButton />
 
       </div>
     </div>

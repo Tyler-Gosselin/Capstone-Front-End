@@ -5,7 +5,7 @@ function Blog() {
   const [blogs, setBlogs] = useState();
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/api/v1/get_blogs");
+    axios.get("http://127.0.0.1:5000/api/v1/get-blogs");
   });
 
   return (

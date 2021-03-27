@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import AuthContext from "../Contexts/Authcontext";
 
 const AuthProvider = (props) => {
-  const [loggedInStatus, setLoggedInStatus] = useState("NOT_LOGGED_IN");
+  const [ loggedInStatus, setLoggedInStatus] = useState("NOT_LOGGED_IN");
   let history = useHistory()
 
   useEffect(() => {
@@ -24,10 +24,11 @@ const AuthProvider = (props) => {
 
   const handleSuccessfulLogin = () => {
     setLoggedInStatus("LOGGED_IN");
-    history.push('./')
+    history.push('/')
   };
 
   const handleLogout = () => {
+    console.log('logout')
     axios({
       method: "POST",
       url: `http://localhost:5000/api/logout`,
@@ -35,7 +36,7 @@ const AuthProvider = (props) => {
     })
       .then(() => {
         setLoggedInStatus("NOT_LOGGED_IN");
-        history.push('./')
+        history.push('/')
       })
       .catch((err) => console.log(err));
   };
