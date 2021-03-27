@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
 
 function Home() {
-  const [news, setNews] = useState()
+  const [news, setNews] = useState();
 
   useEffect(() => {
-   
-  })
-
+    axios({
+      method: "GET",
+      url: `https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal`,
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  });
 
   return (
     <div className="home-container">

@@ -16,12 +16,9 @@ function NavContainer() {
         <NavLink exact to="/about">
           About
         </NavLink>
-        <NavLink exact to = "/login">
-          Sign In
-        </NavLink>
         <button className= "nav-button">
-        <NavLink exact to = "/register">
-          Sign Up
+        <NavLink exact to = "/auth">
+          Login/Create Account
         </NavLink>
         </button>
 
