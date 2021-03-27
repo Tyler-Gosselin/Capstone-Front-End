@@ -1,23 +1,30 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useContext } from "react";
+import BlogContext from "../Contexts/BlogContext";
 
-function Blog() {
-  const [blogs, setBlogs] = useState();
+const Blog = () => {
+  const { blogs } = useContext(BlogContext);
 
-  useEffect(() => {
-    axios.get("http://127.0.0.1:5000/api/v1/get-blogs");
-  });
+  const renderBlogs = () => {
+    return blogs.map((blog) => {
+      return (
+        <div key={blog.id}>
+          <ul>
+          <h1>{blog.title}</h1>
+          <p>{blog.content}</p>
+          </ul>
+        </div>
+      );
+    });
+  };
 
   return (
     <div className="blog-content-wrapper">
-      <div className="blogs-wrapper">
-        <h1> Blog </h1>
-      </div>
+      <div className="blogs-wrapper">{renderBlogs()}</div>
       <div className="create-blog-link">
         <button> Create new blog </button>
       </div>
     </div>
   );
-}
+};
 
 export default Blog;
