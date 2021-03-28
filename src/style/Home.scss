@@ -1,27 +1,21 @@
 .content-wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 15px 15px 0px 15px;
-  
-  .major-news-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black ;
-    height: calc(100vh - 87px);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 
-    @include responsive(tab-land) {
-      font-size: 20px;
-    }
-    @include responsive(tab-port) {
-      font-size: 18px;
-    }
-    @include responsive(phone) {
-      font-size: 16px;
-    } 
+  .content-wrapper img {
+    width: 100%;
+    height: 500px;
   }
 
-  .recent-news-wrapper {
-    border: 1px solid black ;
+
+  @include responsive(tab-land) {
+    font-size: 20px;
+  }
+  @include responsive(tab-port) {
+    font-size: 18px;
+  }
+  @include responsive(phone) {
+    font-size: 16px;
   }
 }

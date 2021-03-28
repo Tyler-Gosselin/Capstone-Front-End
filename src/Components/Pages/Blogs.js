@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import BlogContext from "../Contexts/BlogContext";
 
+
 const Blog = () => {
   const { blogs } = useContext(BlogContext);
 
@@ -12,7 +13,7 @@ const Blog = () => {
       return (
         <div key={blog.id}>
           <ul>
-            <h1>{blog.title}</h1>
+            <h1>{blog.title} </h1>
             <p>{blog.content}</p>
           </ul>
         </div>

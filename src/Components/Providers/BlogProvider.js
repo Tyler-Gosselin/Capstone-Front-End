@@ -19,6 +19,22 @@ const BlogProvider = (props) => {
       .catch((err) => console.log(err));
   }, []);
 
+  const showSingleBlog = (id, title, content) => {
+    axios({
+      method: "GET",
+      url: `http:localhost:5000/api/get-blog/${id}`,
+      data: {
+        title,
+        content
+      }
+    }).then((res) => {
+        const filterBlogs = blogs.filter((blog) => id !== blog.id)
+        setBlogs(filterBlogs)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+
   const removeBlog = (id) => {
     axios({
       method: "DELETE",
@@ -56,6 +72,7 @@ const BlogProvider = (props) => {
     setBlogs,
     removeBlog,
     editBlogs,
+    showSingleBlog
   };
 
   return (

@@ -1,4 +1,10 @@
 .content-page-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  .left-column-image {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+  }
 }

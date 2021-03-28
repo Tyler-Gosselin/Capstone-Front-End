@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -7,7 +7,6 @@ import Home from "./Pages/Home";
 import Blog from "./Pages/Blogs";
 import About from "./Pages/About";
 import AuthForm from "./Auth/AuthForm";
-import AuthContext from "./Contexts/Authcontext";
 import CreateBlog from "./Blogs/Create-Blog-Form";
 
 
