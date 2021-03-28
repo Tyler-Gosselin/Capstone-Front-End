@@ -28,6 +28,7 @@ const AuthForm = () => {
           console.log(res);
           handleSuccessfulLogin(res.data.user_id);
         }
+    
       })
       .catch((err) => console.log(err));
   };
