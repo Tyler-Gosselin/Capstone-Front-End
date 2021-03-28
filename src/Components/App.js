@@ -8,6 +8,7 @@ import Blog from "./Pages/Blogs";
 import About from "./Pages/About";
 import AuthForm from "./Auth/AuthForm";
 import AuthContext from "./Contexts/Authcontext";
+import CreateBlog from "./Blogs/Create-Blog-Form";
 
 
 function App() {
@@ -22,8 +23,8 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/blog" component={Blog} />
             <Route path="/about" component={About} />
-            
             <Route path="/auth" component={AuthForm} />
+            <Route path = "/create-blog" component={CreateBlog} />
           </Switch>
         </div>
       </Router>

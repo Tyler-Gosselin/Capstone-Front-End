@@ -1,4 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+
+
 import BlogContext from "../Contexts/BlogContext";
 
 const Blog = () => {
@@ -9,8 +12,8 @@ const Blog = () => {
       return (
         <div key={blog.id}>
           <ul>
-          <h1>{blog.title}</h1>
-          <p>{blog.content}</p>
+            <h1>{blog.title}</h1>
+            <p>{blog.content}</p>
           </ul>
         </div>
       );
@@ -21,7 +24,9 @@ const Blog = () => {
     <div className="blog-content-wrapper">
       <div className="blogs-wrapper">{renderBlogs()}</div>
       <div className="create-blog-link">
-        <button> Create new blog </button>
+        <NavLink to="/create-blog">
+          <button>Create Blog</button>
+        </NavLink>
       </div>
     </div>
   );

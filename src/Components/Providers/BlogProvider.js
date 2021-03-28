@@ -12,6 +12,7 @@ const BlogProvider = (props) => {
       url: "http://localhost:5000/api/get-blogs",
     })
       .then((res) => {
+        // how to append newblogs above older blogs
         setBlogs(res.data);
         console.log(res);
       })
