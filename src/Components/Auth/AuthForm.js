@@ -18,8 +18,8 @@ const AuthForm = () => {
       url: `http://localhost:5000/api/${formToShow}`,
       data: {
         username: username,
-        password: password,
         email: email,
+        password: password,
       },
       withCredentials: true,
     })

@@ -4,7 +4,7 @@ import LogOutButton from "../Auth/LogOutButton";
 import AuthContext from "../Contexts/Authcontext";
 
 const NavContainer = () => {
-  const {loggedInStatus } = useContext(AuthContext)
+  const { loggedInStatus } = useContext(AuthContext);
 
   return (
     <div className="navigation-wrapper">
@@ -20,17 +20,20 @@ const NavContainer = () => {
         <NavLink exact to="/about">
           About
         </NavLink>
-        <button className= "nav-button">
-        {loggedInStatus === "LOGGED_IN"}
-        <NavLink exact to = "/auth">
-          Login/Create Account
-        </NavLink>
-        </button>
-        <LogOutButton />
-
+        {loggedInStatus === "LOGGED_IN" ? (
+          <>
+            <LogOutButton />
+          </>
+        ) : (
+          <button className="nav-button">
+            <NavLink exact to="/auth">
+              Login/Create Account
+            </NavLink>
+          </button>
+        )}
       </div>
     </div>
   );
-}
+};
 
 export default NavContainer;
