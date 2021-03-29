@@ -4,6 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 import { FaTrash, FaEdit } from "react-icons/fa";
 
 import BlogContext from "../Contexts/BlogContext";
+import { API_URL } from "../API_URL";
 
 const Blog = () => {
   const { blogs } = useContext(BlogContext);
@@ -21,7 +22,7 @@ const Blog = () => {
 
           <div className="icons-wrapper">
             <FaTrash className="icon" onClick={() => removeBlog(blog.id)} />
-            <Link to={`/edit-blog/${blog.id}`}>
+            <Link to={`${API_URL}/edit-blog/${blog.id}`}>
               <FaEdit
                 className="icon"
                 onClick={() => editBlog(blog.id, blog.title, blog.content)}

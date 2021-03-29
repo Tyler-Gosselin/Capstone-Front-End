@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import BlogContext from "../Contexts/BlogContext";
+import { API_URL } from "../API_URL";
 
 const BlogProvider = (props) => {
   const [blogs, setBlogs] = useState([]);
@@ -9,7 +10,7 @@ const BlogProvider = (props) => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: "http://localhost:5000/api/get-blogs",
+      url: `${API_URL}/get-blogs`,
     })
       .then((res) => {
         setBlogs(res.data);
@@ -21,7 +22,7 @@ const BlogProvider = (props) => {
   const showSingleBlog = (id, title, content) => {
     axios({
       method: "GET",
-      url: `http:localhost:5000/api/get-blog/${id}`,
+      url: `${API_URL}/get-blog/${id}`,
       data: {
         title,
         content,
@@ -39,7 +40,7 @@ const BlogProvider = (props) => {
   const removeBlog = (id) => {
     axios({
       method: "DELETE",
-      url: `http://localhost:5000/api/delete-blog/${id}`,
+      url: `${API_URL}/delete-blog/${id}`,
     })
       .then((res) => {
         const filterBlogs = blogs.filter((blog) => id !== blog.id);
@@ -54,7 +55,7 @@ const BlogProvider = (props) => {
   const editBlog = (id, title, content) => {
     axios({
       method: "PATCH",
-      url: `http://localhost:5000/api/edit-blog/${id}`,
+      url: `${API_URL}/edit-blog/${id}`,
       data: {
         title,
         content,

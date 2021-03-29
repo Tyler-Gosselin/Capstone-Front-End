@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { API_URL } from "../API_URL";
 import Authcontext from "../Contexts/Authcontext";
 
 const CreateBlog = () => {
@@ -14,7 +15,7 @@ const CreateBlog = () => {
     e.preventDefault();
     axios({
       method: "POST",
-      url: `http://localhost:5000/api/create-blog`,
+      url: `${API_URL}/create-blog`,
       data: {
         title,
         content,

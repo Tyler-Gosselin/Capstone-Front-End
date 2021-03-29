@@ -3,6 +3,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 import AuthContext from "../Contexts/Authcontext";
+import { API_URL } from "../API_URL";
 
 const AuthForm = () => {
   const [username, setUserName] = useState("");
@@ -17,7 +18,7 @@ const AuthForm = () => {
     e.preventDefault();
     axios({
       method: "POST",
-      url: `http://localhost:5000/api/${formToShow}`,
+      url: `${API_URL}/${formToShow}`,
       data: {
         username: username,
         email: email,
