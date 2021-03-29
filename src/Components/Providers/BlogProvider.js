@@ -50,7 +50,7 @@ const BlogProvider = (props) => {
       });
   };
 
-  const editBlogs = (id, title, content) => {
+  const editBlog = (id, title, content) => {
     axios({
       method: "PATCH",
       url: `http://localhost:5000/api/edit-blog/${id}`,
@@ -71,7 +71,7 @@ const BlogProvider = (props) => {
     blogs,
     setBlogs,
     removeBlog,
-    editBlogs,
+    editBlog,
     showSingleBlog
   };
 
