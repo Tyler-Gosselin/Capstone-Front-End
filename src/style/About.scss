@@ -3,6 +3,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  @include responsive(tab-land) {
+    font-size: 14px;
+  }
+  @include responsive(tab-port) {
+    grid-template-columns: 1fr;
+    font-size: 14px;
+  }
+  @include responsive(phone) {
+    font-size: 14px;
+  }
+
   
  
   .left-column {
