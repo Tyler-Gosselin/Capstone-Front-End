@@ -14,12 +14,12 @@ const Blog = () => {
     return blogs.map((blog) => {
       return (
         <div key={blog.id}>
-          <NavLink to="/blog/<id>">
+          
             <ul>
               <h1>{blog.title} </h1>
               <p>{blog.content}</p>
             </ul>
-          </NavLink>
+          
           <div className="icons-wrapper">
           <FaTrash className="icon" onClick={() => removeBlog(blog.id)} />
           <Link to={`/edit-blog/${blog.id}`}>
