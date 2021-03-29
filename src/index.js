@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
 
 import App from "../src/Components/App";
-import "./Style/Main.scss";
+import "./style/Main.scss"
 import Authprovider from "./Components/Providers/AuthProvider";
 import BlogProvider from "./Components/Providers/BlogProvider";
 
