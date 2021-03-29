@@ -3,6 +3,7 @@ import axios from "axios";
 
 import BlogContext from "../Contexts/BlogContext";
 
+
 const BlogProvider = (props) => {
   const [blogs, setBlogs] = useState([]);
 
@@ -12,7 +13,6 @@ const BlogProvider = (props) => {
       url: "http://localhost:5000/api/get-blogs",
     })
       .then((res) => {
-        // how to append newblogs above older blogs
         setBlogs(res.data);
         console.log(res);
       })
@@ -53,7 +53,7 @@ const BlogProvider = (props) => {
   const editBlogs = (id, title, content) => {
     axios({
       method: "PATCH",
-      url: `http://localhost:5000/api/delete-blog/${id}`,
+      url: `http://localhost:5000/api/edit-blog/${id}`,
       data: {
         title,
         content,
