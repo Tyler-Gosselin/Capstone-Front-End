@@ -8,7 +8,7 @@ import BlogContext from "../Contexts/BlogContext";
 const Blog = () => {
   const { blogs } = useContext(BlogContext);
   const { removeBlog } = useContext(BlogContext);
-  const { editBlogs } = useContext(BlogContext);
+  const { editBlog } = useContext(BlogContext);
 
   const renderBlogs = () => {
     return blogs.map((blog) => {
@@ -20,12 +20,15 @@ const Blog = () => {
               <p>{blog.content}</p>
             </ul>
           </NavLink>
-          <FaTrash onClick={() => removeBlog(blog.id)} />
+          <div className="icons-wrapper">
+          <FaTrash className="icon" onClick={() => removeBlog(blog.id)} />
           <Link to={`/edit-blog/${blog.id}`}>
             <FaEdit
-              onClick={() => editBlogs(blog.id, blog.title, blog.content)}
-            />
+              className="icon"
+              onClick={() => editBlog(blog.id, blog.title, blog.content)}
+              />
           </Link>
+              </div>
         </div>
       );
     });
@@ -36,7 +39,7 @@ const Blog = () => {
       <div className="blogs-wrapper">{renderBlogs()}</div>
       <div className="create-blog-link">
         <NavLink to="/create-blog">
-          <button>Create Blog</button>
+          <button className="create-button">Create Blog</button>
         </NavLink>
       </div>
     </div>

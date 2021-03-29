@@ -1,4 +1,5 @@
 .blog-content-wrapper {
+  font-family: 'Roboto', sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
@@ -18,5 +19,23 @@
     position: fixed;
     right: 0;
     bottom: 0;
+  }
+
+  .icon-wrapper {
+    display: flex;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    color: #fdee30;
+    background-color: #2D383A;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 4px;
+
+    &:hover {
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+    }
   }
 }
