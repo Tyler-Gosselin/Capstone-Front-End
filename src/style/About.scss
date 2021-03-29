@@ -3,9 +3,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  .left-column-image {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+  
+ 
+  .left-column {
+    border: 1px solid black;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
+    padding: 10px;
   }
+
+  .right-column {
+    border: 1px solid black;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
+    padding: 10px;
+  }
+  
 }

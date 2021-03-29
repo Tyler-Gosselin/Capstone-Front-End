@@ -4,7 +4,6 @@ function About() {
   return (
     <div className="content-page-wrapper">
       <div className="left-column">
-        <div className="left-column-image"></div>
         <div className="left-column-content">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
           consequatur maxime laudantium minima quasi blanditiis, nobis dicta cum
@@ -21,7 +20,6 @@ function About() {
         </div>
       </div>
       <div className="right-column">
-        <div className="right-column-image"></div>
         <div className="right-column-content">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
           consequatur maxime laudantium minima quasi blanditiis, nobis dicta cum
