@@ -10,7 +10,6 @@ const CreateBlog = () => {
   const { userId } = useContext(Authcontext);
   let history = useHistory();
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     axios({
@@ -36,21 +35,27 @@ const CreateBlog = () => {
     <div className="create-blog-wrapper">
       <div className=" create-form-wrapper">
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="title"
-            placeholder="Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <textarea
-            type="text"
-            name="content"
-            placeholder="Content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-          />
-          <button type="submit"> Submit </button>
+          <div className="create-blog-title">
+            <input
+              type="text"
+              name="title"
+              placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+          <div className="create-blog-textarea">
+            <textarea
+              type="text"
+              name="content"
+              placeholder="Content"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            />
+            <div>
+              <button type="submit"> Submit </button>
+            </div>
+          </div>
         </form>
       </div>
     </div>

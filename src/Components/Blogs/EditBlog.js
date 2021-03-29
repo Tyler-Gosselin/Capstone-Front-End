@@ -23,24 +23,32 @@ const EditBlog = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="title"
-          placeholder="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <textarea
-          type="text"
-          name="content"
-          placeholder="Content"
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-        />
-        <button type="submit"> Submit </button>
-      </form>
+    <div className="edit-blog-wrapper">
+      <div className="edit-form-wrapper">
+        <form onSubmit={handleSubmit}>
+          <div className="edit-blog-title">
+            <input
+              type="text"
+              name="title"
+              placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+          <div className="edit-blog-textarea">
+            <textarea
+              type="text"
+              name="content"
+              placeholder="Content"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            />
+          </div>
+          <div>
+            <button type="submit"> Submit </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
