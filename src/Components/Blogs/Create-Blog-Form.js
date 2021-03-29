@@ -53,7 +53,7 @@ const CreateBlog = () => {
               onChange={(e) => setContent(e.target.value)}
             />
             <div>
-              <button type="submit"> Submit </button>
+              <button className="account-btn" type="submit"> Submit </button>
             </div>
           </div>
         </form>

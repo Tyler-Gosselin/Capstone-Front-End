@@ -51,7 +51,6 @@ const AuthForm = () => {
 
   return (
     <div className="login-form-wrapper">
-      <h1>{formToShow}</h1>
       <form onSubmit={handleSubmit} className="login-form">
         <div>
           <input
@@ -84,7 +83,7 @@ const AuthForm = () => {
           <button className="account-btn" type="submit">
             {formToShow}
           </button>
-          <button onClick={handleFormToShow}>{formQuestionText()}</button>
+          <button className="account-btn" onClick={handleFormToShow}>{formQuestionText()}</button>
         </div>
       </form>
     </div>

@@ -39,7 +39,7 @@ const Blog = () => {
       <div className="blogs-wrapper">{renderBlogs()}</div>
       <div className="create-blog-link">
         <NavLink to="/create-blog">
-          <button className="create-button">Create Blog</button>
+          <button className="account-btn">Create Blog</button>
         </NavLink>
       </div>
     </div>
