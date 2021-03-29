@@ -16,9 +16,9 @@ function Home() {
           <div className="articles">
             <ul>
               <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
             </ul>
           </div>
         </div>

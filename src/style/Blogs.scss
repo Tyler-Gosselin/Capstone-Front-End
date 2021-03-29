@@ -1,11 +1,11 @@
 .blog-content-wrapper {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
   padding: 15px 15px 0px 15px;
-  
+
   .blogs-wrapper {
     display: grid;
     justify-content: center;
@@ -28,7 +28,7 @@
   .icon {
     font-size: 1.2rem;
     color: #fdee30;
-    background-color: #2D383A;
+    background-color: #2d383a;
     border-radius: 4px;
     padding: 10px;
     margin: 4px;

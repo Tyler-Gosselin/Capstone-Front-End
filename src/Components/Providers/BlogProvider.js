@@ -3,7 +3,6 @@ import axios from "axios";
 
 import BlogContext from "../Contexts/BlogContext";
 
-
 const BlogProvider = (props) => {
   const [blogs, setBlogs] = useState([]);
 
@@ -25,15 +24,17 @@ const BlogProvider = (props) => {
       url: `http:localhost:5000/api/get-blog/${id}`,
       data: {
         title,
-        content
-      }
-    }).then((res) => {
-        const filterBlogs = blogs.filter((blog) => id !== blog.id)
-        setBlogs(filterBlogs)
-    }).catch((err) => {
-      console.log(err)
+        content,
+      },
     })
-  }
+      .then((res) => {
+        const filterBlogs = blogs.filter((blog) => id !== blog.id);
+        setBlogs(filterBlogs);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const removeBlog = (id) => {
     axios({
@@ -72,7 +73,7 @@ const BlogProvider = (props) => {
     setBlogs,
     removeBlog,
     editBlog,
-    showSingleBlog
+    showSingleBlog,
   };
 
   return (

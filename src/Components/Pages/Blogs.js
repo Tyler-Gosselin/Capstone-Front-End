@@ -14,21 +14,20 @@ const Blog = () => {
     return blogs.map((blog) => {
       return (
         <div key={blog.id}>
-          
-            <ul>
-              <h1>{blog.title} </h1>
-              <p>{blog.content}</p>
-            </ul>
-          
+          <ul>
+            <h1>{blog.title} </h1>
+            <p>{blog.content}</p>
+          </ul>
+
           <div className="icons-wrapper">
-          <FaTrash className="icon" onClick={() => removeBlog(blog.id)} />
-          <Link to={`/edit-blog/${blog.id}`}>
-            <FaEdit
-              className="icon"
-              onClick={() => editBlog(blog.id, blog.title, blog.content)}
+            <FaTrash className="icon" onClick={() => removeBlog(blog.id)} />
+            <Link to={`/edit-blog/${blog.id}`}>
+              <FaEdit
+                className="icon"
+                onClick={() => editBlog(blog.id, blog.title, blog.content)}
               />
-          </Link>
-              </div>
+            </Link>
+          </div>
         </div>
       );
     });

@@ -5,9 +5,9 @@ import { useHistory } from "react-router-dom";
 import AuthContext from "../Contexts/Authcontext";
 
 const AuthProvider = (props) => {
-  const [ loggedInStatus, setLoggedInStatus] = useState("NOT_LOGGED_IN");
-  const [userId, setUserId] = useState(null)
-  let history = useHistory()
+  const [loggedInStatus, setLoggedInStatus] = useState("NOT_LOGGED_IN");
+  const [userId, setUserId] = useState(null);
+  let history = useHistory();
 
   useEffect(() => {
     axios({
@@ -17,7 +17,7 @@ const AuthProvider = (props) => {
     })
       .then((res) => {
         if (res.data.message === "User Logged in Via Cookie") {
-          setUserId(res.data.user_id)
+          setUserId(res.data.user_id);
           setLoggedInStatus("LOGGED_IN");
         }
       })
@@ -26,12 +26,12 @@ const AuthProvider = (props) => {
 
   const handleSuccessfulLogin = (user_id) => {
     setLoggedInStatus("LOGGED_IN");
-    setUserId(user_id)
-    history.push('/')
+    setUserId(user_id);
+    history.push("/");
   };
 
   const handleLogout = () => {
-    console.log('logout')
+    console.log("logout");
     axios({
       method: "POST",
       url: `http://localhost:5000/api/logout`,
@@ -39,7 +39,7 @@ const AuthProvider = (props) => {
     })
       .then(() => {
         setLoggedInStatus("NOT_LOGGED_IN");
-        history.push('/')
+        history.push("/");
       })
       .catch((err) => console.log(err));
   };

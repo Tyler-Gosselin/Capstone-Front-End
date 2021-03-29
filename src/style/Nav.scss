@@ -1,12 +1,12 @@
 .navigation-wrapper {
-  background-color: #2D383A ;
-  border: 1px solid black;
+  background-color: #2d383a;
+  border: 1px solid;
   width: 100%;
   height: 80px;
   display: flex;
 
   a {
-    color: #000000;
+    color: #010101;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -14,22 +14,22 @@
   }
 
   .logo-wrapper {
-    font-family: 'Permanent Marker', cursive;
+    font-family: "Permanent Marker", cursive;
     font-size: 20px;
     background-color: #fdee30;
+    border-radius: 3px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-content: center;
   }
 
   .nav-links-wrapper {
     display: flex;
-    justify-content: center;
-    align-content: right;
-    
+    justify-content: right;
+    align-content: center;
 
     a {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       transition: 0.3s ease-in-out;
 
       &:hover {
@@ -37,8 +37,4 @@
       }
     }
   }
-
-  
 }
-
-

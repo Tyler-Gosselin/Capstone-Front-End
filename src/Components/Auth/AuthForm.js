@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
 import AuthContext from "../Contexts/Authcontext";
 
@@ -11,7 +11,7 @@ const AuthForm = () => {
   const [formToShow, setFormToShow] = useState("login");
 
   const { handleSuccessfulLogin } = useContext(AuthContext);
-  let history = useHistory()
+  let history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,10 +27,9 @@ const AuthForm = () => {
     })
       .then((res) => {
         if (res.data.message === "User Verified") {
-          handleSuccessfulLogin(res.data.user_id)
-          history.push("/")
+          handleSuccessfulLogin(res.data.user_id);
+          history.push("/");
         }
-    
       })
       .catch((err) => console.log(err));
   };
@@ -85,7 +84,9 @@ const AuthForm = () => {
           <button className="account-btn" type="submit">
             {formToShow}
           </button>
-          <button className="account-btn" onClick={handleFormToShow}>{formQuestionText()}</button>
+          <button className="account-btn" onClick={handleFormToShow}>
+            {formQuestionText()}
+          </button>
         </div>
       </form>
     </div>
