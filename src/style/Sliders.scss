@@ -12,17 +12,17 @@
   border-radius: 10px;
 
   @include responsive(tab-land) {
-    width: 700px;
+    width: 600px;
     height: 300px;
     border-radius: 10px;
   }
   @include responsive(tab-port) {
-    width: 500px;
+    width: 400px;
     height: 300px;
     border-radius: 10px;
   }
   @include responsive(phone) {
-    width: 300px;
+    width: 250px;
     height: 200px;
     border-radius: 10px;
   }

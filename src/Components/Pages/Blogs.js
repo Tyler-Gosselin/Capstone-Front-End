@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useEffect,useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import axios from "axios"
 
 import { FaTrash, FaEdit } from "react-icons/fa";
 
@@ -7,9 +8,22 @@ import BlogContext from "../Contexts/BlogContext";
 import { API_URL } from "../API_URL";
 
 const Blog = () => {
+  // const [getblogs, setGetBlogs] = useState()
   const { blogs } = useContext(BlogContext);
   const { removeBlog } = useContext(BlogContext);
   const { editBlog } = useContext(BlogContext);
+
+  // useEffect(() => {
+  //   axios({
+  //     method: "GET",
+  //     url: `${API_URL}/get-blogs`,
+  //   })
+  //     .then((res) => {
+  //       setGetBlogs(res.data);
+  //       console.log(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   const renderBlogs = () => {
     return blogs.map((blog) => {
