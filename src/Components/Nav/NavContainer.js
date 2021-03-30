@@ -25,7 +25,7 @@ const NavContainer = () => {
             <LogOutButton />
           </>
         ) : (
-          <button className="nav-button">
+          <button className="login-button">
             <NavLink exact to="/auth">
               Login/Create Account
             </NavLink>

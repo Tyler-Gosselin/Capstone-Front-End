@@ -44,5 +44,21 @@
         color: #fdee30;
       }
     }
+
+    .login-button {
+      font-family: "Roboto", sans-serif;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #fdee30;
+      border-radius: 12px;
+
+      a {
+      color: black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+      }
+    }
   }
 }
