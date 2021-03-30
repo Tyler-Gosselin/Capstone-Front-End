@@ -85,7 +85,7 @@ const AuthForm = () => {
           <button className="account-btn" type="submit">
             {formToShow}
           </button>
-          <button className="account-btn" onClick={handleFormToShow}>
+          <button type="button" className="account-btn" onClick={handleFormToShow}>
             {formQuestionText()}
           </button>
         </div>
