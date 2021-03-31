@@ -18,6 +18,10 @@ const BlogProvider = (props) => {
       .catch((err) => console.log(err));
   }, []);
 
+  const handleAddBlog = (blog) => {
+    setBlogs([blog, ...blogs]);
+  };
+
   const showSingleBlog = (id, title, content) => {
     axios({
       method: "GET",
@@ -72,6 +76,7 @@ const BlogProvider = (props) => {
     removeBlog,
     editBlog,
     showSingleBlog,
+    handleAddBlog,
   };
 
   return (

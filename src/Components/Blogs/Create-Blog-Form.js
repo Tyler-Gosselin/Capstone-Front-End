@@ -3,11 +3,13 @@ import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { API_URL } from "../API_URL";
 import Authcontext from "../Contexts/Authcontext";
+import BlogContext from "../Contexts/BlogContext"
 
 const CreateBlog = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
+  const { handleAddBlog } = useContext(BlogContext)
   const { userId } = useContext(Authcontext);
   let history = useHistory();
 
@@ -24,6 +26,7 @@ const CreateBlog = () => {
       withCredentials: true,
     })
       .then((res) => {
+        handleAddBlog(res.data)
         history.push("/blog");
       })
       .catch((err) => {
