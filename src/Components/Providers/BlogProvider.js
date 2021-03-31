@@ -44,7 +44,6 @@ const BlogProvider = (props) => {
       .then((res) => {
         const filterBlogs = blogs.filter((blog) => id !== blog.id);
         setBlogs(filterBlogs);
-        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -63,7 +62,6 @@ const BlogProvider = (props) => {
       .then((res) => {
         const filterBlogs = blogs.filter((blog) => blog.id !== res.data.id);
         setBlogs([res.data, ...filterBlogs]);
-        console.log(res);
       })
       .catch((err) => console.log(err));
   };

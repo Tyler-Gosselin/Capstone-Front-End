@@ -25,7 +25,6 @@ const CreateBlog = () => {
     })
       .then((res) => {
         history.push("/blog");
-        console.log(res);
       })
       .catch((err) => {
         console.log(err);

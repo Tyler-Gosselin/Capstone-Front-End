@@ -32,7 +32,6 @@ const AuthProvider = (props) => {
   };
 
   const handleLogout = () => {
-    console.log("logout");
     axios({
       method: "POST",
       url: `${API_URL}/logout`,
