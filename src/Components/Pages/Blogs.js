@@ -4,12 +4,13 @@ import { NavLink, Link } from "react-router-dom";
 import { FaTrash, FaEdit } from "react-icons/fa";
 
 import BlogContext from "../Contexts/BlogContext";
+import AuthContext from "../Contexts/Authcontext";
 
 const Blog = () => {
+  const { loggedInStatus } = useContext(AuthContext);
   const { blogs } = useContext(BlogContext);
   const { removeBlog } = useContext(BlogContext);
   const { editBlog } = useContext(BlogContext);
-
 
   const renderBlogs = () => {
     return blogs.map((blog) => {
@@ -37,11 +38,13 @@ const Blog = () => {
   return (
     <div className="blog-content-wrapper">
       <div className="blogs-wrapper">{renderBlogs()}</div>
-      <div className="create-blog-link">
-        <NavLink to="/create-blog">
-          <button className="account-btn">Create Blog</button>
-        </NavLink>
-      </div>
+      {loggedInStatus === "LOGGED_IN" ? (
+        <div className="create-blog-link">
+          <NavLink to="/create-blog">
+            <button className="account-btn">Create Blog</button>
+          </NavLink>
+        </div>
+      ) : null}
     </div>
   );
 };

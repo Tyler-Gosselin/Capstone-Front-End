@@ -54,8 +54,7 @@ const CreateBlog = () => {
             />
             <div>
               <button className="account-btn" type="submit">
-                {" "}
-                Submit{" "}
+                Submit
               </button>
             </div>
           </div>
