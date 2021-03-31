@@ -20,7 +20,7 @@ const Blog = () => {
             <h1>{blog.title} </h1>
             <p>{blog.content}</p>
           </ul>
-
+          {loggedInStatus === "LOGGED_IN" ? (
           <div className="icons-wrapper">
             <FaTrash className="icon" onClick={() => removeBlog(blog.id)} />
             <Link to={`/edit-blog/${blog.id}`}>
@@ -30,6 +30,7 @@ const Blog = () => {
               />
             </Link>
           </div>
+            ) : null}
         </div>
       );
     });
