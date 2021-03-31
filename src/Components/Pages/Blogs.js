@@ -38,7 +38,7 @@ const Blog = () => {
 
           <div className="icons-wrapper">
             <FaTrash className="icon" onClick={() => removeBlog(blog.id)} />
-            <Link to={`${API_URL}/edit-blog/${blog.id}`}>
+            <Link to={`/edit-blog/${blog.id}`}>
               <FaEdit
                 className="icon"
                 onClick={() => editBlog(blog.id, blog.title, blog.content)}
