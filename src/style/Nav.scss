@@ -5,6 +5,20 @@
   height: 80px;
   display: flex;
 
+  
+  @include responsive(tab-land) {
+    font-size: 14px;
+  }
+  @include responsive(tab-port) {
+    grid-template-columns: 1fr;
+    font-size: 14px;
+  }
+  @include responsive(phone) {
+    display: block;
+    height: auto;
+    font-size: 14px;
+  }
+
   .logo-wrapper {
     font-family: "Permanent Marker", cursive;
     font-size: 20px;
