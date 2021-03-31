@@ -14,7 +14,6 @@ const BlogProvider = (props) => {
     })
       .then((res) => {
         setBlogs(res.data);
-        console.log(res);
       })
       .catch((err) => console.log(err));
   }, []);
