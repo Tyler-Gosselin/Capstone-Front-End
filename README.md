@@ -1,6 +1,6 @@
 # CAPSTONE
 
-> This is a project I completed while attending the Bottega bootcamp. It was built using React. The application communicates with a flask API using a SQL database.
+> This project was made while attending the Bottega Coding bootcamp. The project is built using a Flask API using a SQL database. The front end was built with React. 
 
 # Documentation
 
