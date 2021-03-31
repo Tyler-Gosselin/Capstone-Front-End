@@ -18,7 +18,8 @@ You will also see any lint errors in the console.
 
 ## Hosting
 
--[Netlify](https://tg-capstone.netlify.app)
+- [Netlify](https://tg-capstone.netlify.app)
+- [Heroku](https://tg-capstone.herokuapp.com/)
 
 ## Features list
 
