@@ -38,7 +38,7 @@ const Blog = () => {
 
   return (
     <div className="blog-content-wrapper">
-      <div className="blogs-wrapper">{renderBlogs()}</div>
+      <div className="blogs-wrapper"><h1>Blogs</h1>{renderBlogs()}</div>
       {loggedInStatus === "LOGGED_IN" ? (
         <div className="create-blog-link">
           <NavLink to="/create-blog">

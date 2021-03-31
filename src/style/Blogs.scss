@@ -11,8 +11,11 @@
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    height: calc(100vh - 87px);
     width: 75vw;
+
+    ul {
+      padding: 0px;
+    }
   }
 
   .create-blog-link {
